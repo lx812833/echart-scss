@@ -17,3 +17,10 @@ $designHeight: 1080;
 @function vh($px) {
   @return math.div($px, $designHeight) * 100vh;
 }
+
+// 处理px转换为rem
+@function px2rem($px) {
+  $design_font_size: 12;
+
+  @return ($px / $design_font_size) + rem;
+}
