@@ -1,0 +1,19 @@
+// 使用Scss的Math函数
+@use "sass:math";
+
+// 默认设计稿宽度
+$designWidth: 1920;
+// 默认设计稿高度
+$designHeight: 1080;
+
+// 使用vw和vh适配方案以适配不同的显示器屏幕
+
+// 处理px转换为vw
+@function vw($px) {
+  @return math.div($px, $designWidth) * 100vw;
+}
+
+// 处理px转换为vh
+@function vh($px) {
+  @return math.div($px, $designHeight) * 100vh;
+}
